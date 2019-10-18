@@ -24,6 +24,7 @@ module.exports = function solveSudoku(matrix) {
 		}
 		return true;
 	}
+	
 	solveMatrix(matrix);
 
 	return matrix;
