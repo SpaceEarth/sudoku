@@ -3,7 +3,7 @@ module.exports = function solveSudoku(matrix) {
 		const [iCube, jCube] = [i - i % 3, j - j % 3];
 		return !matrix.some((e, index) => e[j] === number || matrix[i][index] === number || matrix[iCube + (index / 3) | 0][jCube + index % 3] === number);
 	}
-	
+
 	function solveMatrix(matrix) {
 		for (let i = 0; i < 9; i += 1) {
 			for (let j = 0; j < 9; j += 1) {
@@ -26,6 +26,6 @@ module.exports = function solveSudoku(matrix) {
 	}
 
 	solveMatrix(matrix);
-	
+
 	return matrix;
 }
